@@ -20,20 +20,27 @@
 <body class="d-flex text-center text-white bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">YelpCamp</h3>
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">YelpCamp</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-                <nav class="nav justify-content-center float-md-end">
-                    <a href="#" class="nav-link active" aria-current="page">Home</a>
-                    <a href="/campgrounds" class="nav-link" aria-current="page">Campgrounds</a>
-                    <% if (!currentUser) { %>
-                        <a href="/login" class="nav-link" aria-current="page">Login</a>
-                        <a href="/register" class="nav-link" aria-current="page">Register</a>
-                        <% } else{ %>
-                            <a href="/logout" class="nav-link" aria-current="page">Logout</a>
-                            <% } %>
-                </nav>
-            </div>
+                        <div class="navbar-nav">
+                            <% if(!currentUser){ %>
+                                <a href="/login" class="nav-link">Login</a>
+                                <a href="/register" class="nav-link">Register</a>
+                                <% }else{ %>
+                                    <a href="/logout" class="nav-link">Logout</a>
+                                    <% } %>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
         <main class="px-3 mb-auto">
             <h1>YelpCamp</h1>
@@ -43,14 +50,14 @@
                 Campgrounds</a>
         </main>
         <footer class="text-white-50 float-md-end mb-0"">
-            <p>&copy; 2020 YelpCamp - <a href=https://www.udemy.com/course/the-web-developer-bootcamp/> Made as a
-            part of Colt Steele's WebDev BootCamp</a></p>
+            <p>&copy; 2020 YelpCamp - Developed by <a href=" ismailmo.com">Ismail</a> as part of <a
+                href=https://www.udemy.com/course/the-web-developer-bootcamp />Colt Steele's WebDev BootCamp</a></p>
         </footer>
     </div>
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-            </script>
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
